@@ -262,6 +262,46 @@ body { background: #FAFAF8; }
   z-index: 1;
 }
 @media print { .profile { background: white; box-shadow: none; } }
+
+/* Sticky navigation with navy, white, and warm gold accents. */
+.navigation {
+  position: sticky;
+  top: 10px;
+  z-index: 100;
+  background: #294D6D;
+  border-color: #294D6D;
+  box-shadow: 0 6px 20px rgba(25, 43, 62, 0.20);
+}
+.navigation a { color: #FFFFFF; }
+.navigation a:hover,
+.navigation a:focus-visible {
+  background: #39566F;
+  color: #FFE2A0;
+}
+.navigation a:focus-visible {
+  outline: 2px solid #F1CB75;
+  outline-offset: 2px;
+}
+.navigation a[href$=".pdf"] {
+  margin-left: auto;
+  background: #F1CB75;
+  color: #243D55;
+}
+.navigation a[href$=".pdf"]:hover,
+.navigation a[href$=".pdf"]:focus-visible {
+  background: #FFE2A0;
+  color: #182C40;
+}
+html { scroll-padding-top: 120px; }
+.skip:focus { z-index: 101; }
+@media (max-width: 650px) {
+  .navigation { top: 6px; }
+  .navigation a[href$=".pdf"] { margin-left: 0; }
+  html { scroll-padding-top: 190px; }
+}
+@media print {
+  .navigation { position: static; box-shadow: none; }
+}
 </style></head>
 <body><a class="skip" href="#main">Skip to content</a>
 <header class="profile" id="top"><div class="profile-inner"><div class="profile-copy"><h1><strong class="author-name">Anastasiia Tkachenko</strong></h1>
